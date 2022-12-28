@@ -1,0 +1,360 @@
+.inner {
+  width: 960px;
+  padding: 0 10px;
+  margin: auto;
+  /* outline: 1px dashed red; */
+}
+
+#wrap {
+  min-width: 960px;
+  color: #172234;
+}
+.top {
+  background-color: #f7f8f3;
+  border-bottom: 1px solid #eeeeec;
+  text-align: right;
+  /* overflow: auto; */
+}
+.top .login {
+  padding: 10px 0 8px 0;
+  font-size: 12px;
+  color: #8c8984;
+  display: inline-block;
+  /* float: right; */
+}
+.hd .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hd .logo {
+  padding: 15px 0;
+}
+.hd .gnb .main {
+  display: flex;
+}
+.hd .gnb .main > li {
+  padding: 0 16px;
+}
+.hd .gnb .main > li > a {
+  font-weight: bold;
+}
+.hd .gnb .main > li:hover > a {
+  color: #e55b72;
+}
+.hd .gnb .main > li:last-child > a {
+  color: #8d8582;
+}
+
+.hd .gnb .main > li::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #e55b72;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+.hd .gnb .main > li:hover::after {
+  width: 100%;
+}
+
+.hd .sub {
+  display: none;
+}
+
+.hd .gnb .sub {
+  position: absolute;
+  top: 95px;
+  left: 0;
+  width: 100%;
+  padding-top: 28px;
+  padding-bottom: 90px;
+  background-color: #fff;
+  box-shadow: 0 5px 5px rgba(100, 100, 100, 0.3);
+
+  z-index: 100;
+}
+.hd .gnb .sub .inner {
+  justify-content: center;
+}
+.hd .gnb .sub .inner ul {
+  display: flex;
+  align-items: stretch;
+
+  flex-wrap: wrap;
+}
+.hd .gnb .sub li {
+  width: 156px;
+  border-right: 1px solid #eaeaea;
+  padding: 10px 16px;
+}
+.hd .gnb .sub li:last-child,
+.hd .gnb .sub li.noborder {
+  border: 0;
+}
+.hd .gnb .sub li .tit {
+  font-weight: bold;
+  padding-bottom: 15px;
+  display: block;
+}
+.hd .gnb .sub li a {
+  line-height: 1.5;
+  letter-spacing: -1.5px;
+}
+.hd .gnb .sub li a:hover {
+  color: #e55b72;
+}
+
+/* 검색버튼과 검색창 영역 */
+.hd .search_box {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 100;
+}
+.hd .search_box .inbox {
+  background-color: #fff;
+  width: 500px;
+  height: 650px;
+  margin: 200px auto;
+
+  position: relative;
+}
+.hd .search_box .tit {
+  font-size: 18px;
+  padding: 20px;
+  border-bottom: 1px solid #c7c9d6;
+}
+.hd .search_box .tabmenu {
+  display: flex;
+  position: relative;
+}
+.hd .search_box .tabmenu > li {
+  flex: 1;
+  text-align: center;
+  border-bottom: 1px solid #a6a6a6;
+}
+.hd .search_box .tabmenu > li > a {
+  padding: 16px 0;
+  color: #7f939e;
+}
+.hd .search_box .tabmenu > li > a.active {
+  color: #eb5875;
+  border-bottom: 3px solid #eb5875;
+  font-weight: bold;
+}
+.hd .search_box .tabmenu > li > div {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  text-align: left;
+
+  background-color: #f6f7f1;
+  padding: 10px;
+}
+.hd .search_box .tabmenu > li > div small {
+  font-size: 11px;
+  color: #9a9a9a;
+  display: inline-block;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.hd .search_box .tabmenu > li .con1 {
+  display: block;
+}
+
+.hd .search_box .tabmenu > li .con1 form input {
+  background-color: #8294a0;
+  border: 0;
+  color: #fff;
+  padding: 10px 40px 10px 10px;
+  width: 100%;
+}
+.hd .search_box .tabmenu > li .con1 form input::placeholder {
+  color: #fff;
+}
+.hd .search_box .tabmenu > li .con1 form button {
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  outline: 0;
+}
+.hd .search_box .btn_close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 34px;
+  border: 0;
+  outline: 0;
+  transition: 0.3s;
+}
+.hd .search_box .btn_close:hover {
+  transform: rotate(90deg);
+}
+
+/* 비주얼 영역 */
+.visual {
+  position: relative;
+}
+.visual .quick {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.visual .quick ul {
+  width: 700px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 12px;
+
+  display: flex;
+}
+.visual .quick ul li {
+  flex: 1;
+  padding: 0 2px;
+}
+.visual .quick ul li a {
+  background-color: #fff;
+  padding: 14px 0;
+  text-align: center;
+  transition: 0.2s;
+}
+.visual .quick ul li a:hover {
+  background-color: #979088;
+  color: #fff;
+}
+
+/* 최근 게시판 영역 */
+.boards {
+  display: flex;
+  padding: 50px 0;
+}
+.boards > div {
+  flex: 1;
+  padding: 0 16px;
+  position: relative;
+}
+.boards > div h2 {
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.boards > div ul li {
+  padding: 10px 0;
+}
+.boards > div ul li .date {
+  color: #8d9298;
+  font-size: 13px;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+.boards > div ul li a {
+  width: 256px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.boards > div ul li a:hover {
+  color: #e55b72;
+}
+.boards > div .more {
+  position: absolute;
+  top: 0;
+  right: 20px;
+
+  color: #8d9298;
+  font-size: 13px;
+}
+
+.boards > .b_event {
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+}
+.boards > .b_event h2 {
+  color: #1a5fa4;
+}
+
+/* 이벤트 광고 영역 */
+.event {
+  padding-bottom: 100px;
+}
+.event ul {
+  display: flex;
+}
+.event ul li {
+  padding: 0 2px;
+}
+
+/* 푸터 하단 영역 */
+footer {
+  background: #454d5a;
+  color: #fff;
+  padding-bottom: 65px;
+}
+footer .inner {
+  display: flex;
+}
+footer .ft {
+  width: 800px;
+}
+footer .ft .c_center {
+  font-weight: bold;
+  padding: 28px 0;
+}
+footer .ft .c_center span:first-child {
+  padding-right: 20px;
+}
+
+footer .ft .ft_menu {
+  font-size: 12px;
+  display: flex;
+  padding-bottom: 12px;
+}
+footer .ft .ft_menu li {
+  padding-right: 28px;
+  position: relative;
+}
+footer .ft .ft_menu li::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+footer .ft .ft_menu li:last-child:after {
+  display: none;
+}
+
+footer .ft .copy {
+  color: #afadb0;
+}
+footer .ft .access {
+  padding-top: 20px;
+}
+footer .ft .access img {
+  /* vertical-align: middle; */
+  float: left;
+}
+footer .ft .access span {
+  display: inline-block;
+  padding: 6px;
+  font-size: 12px;
+}
+footer .sns ul {
+  display: flex;
+}
+footer .sns ul a {
+  padding: 8px;
+}
